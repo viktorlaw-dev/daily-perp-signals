@@ -47,8 +47,10 @@ BYBIT_API_SECRET = get_env_var("BYBIT_API_SECRET")
 TELEGRAM_BOT_TOKEN = get_env_var("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = get_env_var("TELEGRAM_CHAT_ID")
 
-# Bybit Testnet base URL.
-BYBIT_BASE_URL = "https://api-testnet.bybit.com"
+# Bybit base URL.
+# Use mainnet for live signals. Testnet blocks cloud IP ranges (GitHub Actions, etc.).
+BYBIT_BASE_URL = "https://api.bybit.com"
+# For local development on testnet, change to "https://api-testnet.bybit.com"
 
 # Symbol selection settings.
 TOP_N_SYMBOLS = 15
