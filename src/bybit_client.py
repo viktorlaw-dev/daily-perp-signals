@@ -33,7 +33,9 @@ def _request(path: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
         Parsed JSON response as a dictionary.
     """
     url = f"{BYBIT_BASE_URL}{path}"
-    headers = {}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
     if BYBIT_API_KEY:
         headers["X-BAPI-API-KEY"] = BYBIT_API_KEY
 

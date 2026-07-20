@@ -1,0 +1,34 @@
+﻿2026-07-20T20:38:09.7478697Z ##[group]Run python -m src.run_signals
+2026-07-20T20:38:09.7479170Z [36;1mpython -m src.run_signals[0m
+2026-07-20T20:38:09.7507729Z shell: /usr/bin/bash -e {0}
+2026-07-20T20:38:09.7508079Z env:
+2026-07-20T20:38:09.7508430Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-20T20:38:09.7508949Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-07-20T20:38:09.7509433Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-20T20:38:09.7509869Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-20T20:38:09.7510323Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-07-20T20:38:09.7510814Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-07-20T20:38:09.7511197Z ##[endgroup]
+2026-07-20T20:38:10.2963374Z Traceback (most recent call last):
+2026-07-20T20:38:10.2972255Z   File "<frozen runpy>", line 198, in _run_module_as_main
+2026-07-20T20:38:10.2973109Z   File "<frozen runpy>", line 88, in _run_code
+2026-07-20T20:38:10.2974599Z   File "/home/runner/work/daily-perp-signals/daily-perp-signals/src/run_signals.py", line 61, in <module>
+2026-07-20T20:38:10.2975815Z     main()
+2026-07-20T20:38:10.2976865Z   File "/home/runner/work/daily-perp-signals/daily-perp-signals/src/run_signals.py", line 32, in main
+2026-07-20T20:38:10.2978141Z     symbols = get_top_symbols()
+2026-07-20T20:38:10.2978762Z               ^^^^^^^^^^^^^^^^^
+2026-07-20T20:38:10.2980335Z   File "/home/runner/work/daily-perp-signals/daily-perp-signals/src/bybit_client.py", line 95, in get_top_symbols
+2026-07-20T20:38:10.2981635Z     tickers = get_all_tickers()
+2026-07-20T20:38:10.2982238Z               ^^^^^^^^^^^^^^^^^
+2026-07-20T20:38:10.2983463Z   File "/home/runner/work/daily-perp-signals/daily-perp-signals/src/bybit_client.py", line 80, in get_all_tickers
+2026-07-20T20:38:10.2984886Z     payload = _request(
+2026-07-20T20:38:10.2985939Z               ^^^^^^^^^
+2026-07-20T20:38:10.2987103Z   File "/home/runner/work/daily-perp-signals/daily-perp-signals/src/bybit_client.py", line 41, in _request
+2026-07-20T20:38:10.2988392Z     response.raise_for_status()
+2026-07-20T20:38:10.2989769Z   File "/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+2026-07-20T20:38:10.2991253Z     raise HTTPError(http_error_msg, response=self)
+2026-07-20T20:38:10.2992699Z requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/tickers?category=linear
+2026-07-20T20:38:10.2994377Z ============================================================
+2026-07-20T20:38:10.2995429Z   DAILY PERP SIGNALS — Signal Scanner
+2026-07-20T20:38:10.2996144Z ============================================================
+2026-07-20T20:38:10.3556397Z ##[error]Process completed with exit code 1.
