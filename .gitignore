@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment secrets - NEVER commit this
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Project data and logs
+data/
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
